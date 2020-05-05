@@ -4,13 +4,17 @@
     width: 340px;
     height: 400px;
     margin-top: 7%;
+    background-color: #268AFF;
 }
 
 #cabecera{
     text-align: center;
-    color: rgb(56, 56, 56);
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 1px 1px 4px rgb(114, 114, 114);
     padding: 7px;
+    background-color: #FD9A28;
+    margin-bottom: 20px;
 }
 
 #casilla{
@@ -22,25 +26,35 @@
     box-shadow: 1px 1px 4px rgb(114, 114, 114);
     padding: 5px;
     text-align: right;
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(129, 129, 129);
+    border: none;
 }
 
 #botones{
     margin: 0px auto;
     display: flex;
     width: 300px;
+    height: 200px;
     margin-top: 20px;
 }
 
 #numeros{
     width: 140px;
+    text-align: center;
+    margin: 0;
 }
 
 #numeros button{
     width: 40px;
     height: 40px;
     font-weight: 900;
-    color: rgb(56, 56, 56);
+    color: rgb(95, 94, 94);
     /* transition: 0.5s; */
+    border: none;
+    margin: 2px;
+    border-radius: 3px;
 }
 
 /* #numeros button:hover{
@@ -48,19 +62,20 @@
 } */
 
 #operadores{
-    margin-left: 60px;
-    width: 65px;
-    text-align: center;
-    
+    margin: 0px;
+    width: 100px;
+    text-align: center;   
 }
 
 #operadores Button{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     font-weight: 900;
-    color: rgb(56, 56, 56);
+    color: rgb(95, 94, 94);
     padding: 0;
-
+    margin: 2px;
+    border: none;
+    border-radius: 3px;
 }
 
 /* .operadores{

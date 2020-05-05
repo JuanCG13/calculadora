@@ -299,9 +299,6 @@ function result() {
         vista = document.getElementById('casilla').value = resultado
     }
 
-
-
-
 }
 
 
