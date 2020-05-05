@@ -1,22 +1,35 @@
-// var numero = '12.30*2'
+// var numero = '100000101010'
 // var separador = numero.split('*')
 // var resultado = 1
 
 // for (var i = 0; i < separador.length; i ++)
 // {
-//     resultado = parseFloat(separador[i]) * resultado
+    //     resultado = parseFloat(separador[i]) * resultado
+    
+    
+    
+    // console.log(numero)
+    
+    // numero = numero.substr('1')
+    
+    // console.log(numero)
 
-// }
-
-// console.log(resultado)
 
 
 
-
-
-
-var vista = document.getElementById('casilla').value
+var vista = document.getElementById('casilla').value = ''
 var validaciones = ['+', '-', 'x', '/']
+
+
+function del() {
+
+    pos = vista.length - 1
+    borrar = vista.substring(0,pos)
+    vista = document.getElementById('casilla').value = borrar
+
+    console.log('entro')
+
+}
 
 
 function valpunto(cadena) {
