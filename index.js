@@ -187,37 +187,50 @@ function result()
 
     for(var i = 0; i < numero.length; i++)
     {
-        if(parseInt(numero.charCodeAt(i)) > 48 && parseInt(numero.charCodeAt(i)) < 58  )
-        {
-            console.log(numero.charCodeAt(i))
-            // suma = parseInt(numero.charAt(i-1)) + parseInt(numero.charAt(i+1))
-        }
         if(numero.charAt(i) == '+' )
         {
-            console.log('suma')
+            if(parseInt(numero.charCodeAt(i+1)) > 48 && parseInt(numero.charCodeAt(i+1)) < 58  )
+            {
+                suma += parseInt(numero.charAt(i+1))
+                // suma = parseInt(numero.charAt(i-1)) + parseInt(numero.charAt(i+1))
+                if(parseInt(numero.charCodeAt(i-1)) > 48 && parseInt(numero.charCodeAt(i-1)) < 58  )
+                {
+
+                    if(parseInt(numero.charAt(i-1)) != parseInt(numero.charAt(i-3)))
+                    {
+                        suma += parseInt(numero.charAt(i-1))
+                        // suma = parseInt(numero.charAt(i-1)) + parseInt(numero.charAt(i+1))
+                    }
+                }
+            }
+
         }
+        
         if(numero.charAt(i) == '-' )
         {
             console.log('resta')
         }
+        
         if(numero.charAt(i) == 'x' )
         {
             console.log('multiplicacion')
         }
+        
         if(numero.charAt(i) == '/' )
         {
             console.log('division')
         }
     }
+    console.log(suma)
     // var separador = numero.split('+')
     // var resultado = 0
 
     // for (var i = 0; i < separador.length; i ++)
     // {
     //     resultado = parseInt(separador[i]) + resultado
-        
+    
     // }
-
+    
     // vista = document.getElementById('casilla').value = resultado
 
     // console.log(resultado)
