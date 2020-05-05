@@ -17,6 +17,27 @@
 
 var vista = document.getElementById('casilla').value
 
+function verificacion (cadena)
+{
+    var cont = 0
+    for(var i = 0; i < cadena.length; i ++)
+    {
+        if(cadena.charCodeAt(i) >= 42 && cadena.charCodeAt(i) <= 47 )
+        {
+            cont += 1
+        }
+    }
+
+    if (cont == 1)
+    {
+        return false
+    }
+    else 
+    {
+        return true
+    }
+}
+
 
 function uno ()
 {
@@ -138,104 +159,70 @@ function reset()
 
 function suma()
 {
-    valor = 0
 
-    valor = document.getElementById('suma').value
+    if (verificacion(vista) == true)
+    {
 
-    vista = document.getElementById('casilla').value += valor
-
-    console.log(valor)
+        valor = 0
+    
+        valor = document.getElementById('suma').value
+    
+        vista = document.getElementById('casilla').value += valor
+    
+        console.log(valor)
+    }
 }
 
 function resta()
 {
-    valor = 0
-
-    valor = document.getElementById('resta').value
-
-    vista = document.getElementById('casilla').value += valor
-
-    console.log(valor)
+    if (verificacion(vista) == true)
+    {
+        valor = 0
+    
+        valor = document.getElementById('resta').value
+    
+        vista = document.getElementById('casilla').value += valor
+    
+        console.log(valor)
+    }
 }
 
 function multi()
 {
-    valor = 0
-
-    valor = document.getElementById('multi').value
-
-    vista = document.getElementById('casilla').value += valor
-
-    console.log(valor)
+    if (verificacion(vista) == true)
+    {
+        valor = 0
+    
+        valor = document.getElementById('multi').value
+    
+        vista = document.getElementById('casilla').value += valor
+    
+        console.log(valor)
+    }
 }
 
 function div()
 {
-    valor = 0
-
-    valor = document.getElementById('div').value
-
-    vista = document.getElementById('casilla').value += valor
-
-    console.log(valor)
+    if (verificacion(vista) == true)
+    {
+        valor = 0
+    
+        valor = document.getElementById('div').value
+    
+        vista = document.getElementById('casilla').value += valor
+    
+        console.log(valor)
+    }
 }
 
 function result()
 {
     var numero = vista
-    var resultado = 0
+    numero.replace()
+    var resultado = parseInt(numero)
 
-    for(var i = 0; i < numero.length; i++)
-    {
-        if(numero.charAt(i) == '+' )
-        {
-            if(parseInt(numero.charCodeAt(i+1)) > 48 && parseInt(numero.charCodeAt(i+1)) < 58  )
-            {
-                resultado += parseInt(numero.charAt(i+1))
-                // suma = parseInt(numero.charAt(i-1)) + parseInt(numero.charAt(i+1))
-                if(parseInt(numero.charCodeAt(i-1)) > 48 && parseInt(numero.charCodeAt(i-1)) < 58  )
-                {
-
-                    if(parseInt(numero.charAt(i-1)) != parseInt(numero.charAt(i+2)))
-                    {
-                        resultado += parseInt(numero.charAt(i-1))
-                        // suma = parseInt(numero.charAt(i-1)) + parseInt(numero.charAt(i+1))
-                    }
-                }
-            }
-            
-        }
-        
-        if(numero.charAt(i) == '-' )
-        {
-            if(parseInt(numero.charCodeAt(i+1)) > 48 && parseInt(numero.charCodeAt(i+1)) < 58  )
-            {
-                resultado = resultado - parseInt(numero.charAt(i+1))
-                // suma = parseInt(numero.charAt(i-1)) + parseInt(numero.charAt(i+1))
-                if(parseInt(numero.charCodeAt(i-1)) > 48 && parseInt(numero.charCodeAt(i-1)) < 58  )
-                {
-
-                    if(parseInt(numero.charAt(i-1)) != parseInt(numero.charAt(i+2)))
-                    {
-                        resultado += parseInt(numero.charAt(i-1))
-                        // suma = parseInt(numero.charAt(i-1)) + parseInt(numero.charAt(i+1))
-                    }
-                }
-            }
-            
-        }
-        
-        if(numero.charAt(i) == 'x' )
-        {
-            console.log('multiplicacion')
-        }
-        
-        if(numero.charAt(i) == '/' )
-        {
-            console.log('division')
-        }
-    }
-    console.log(resultado)
+    
+    console.log(resultado) 
     // var separador = numero.split('+')
     // var resultado = 0
 
