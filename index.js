@@ -221,11 +221,6 @@ function result()
     // vista = document.getElementById('casilla').value = resultado
 
     // console.log(resultado)
-
-    if(numero.split() == '+')
-    {
-        console.log('no se')
-    }
     
 
 }
