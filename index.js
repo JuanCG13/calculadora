@@ -1,10 +1,10 @@
-// var numero = '1200*1300*2'
+// var numero = '12.30*2'
 // var separador = numero.split('*')
 // var resultado = 1
 
 // for (var i = 0; i < separador.length; i ++)
 // {
-//     resultado = parseInt(separador[i]) * resultado
+//     resultado = parseFloat(separador[i]) * resultado
     
 // }
 
@@ -233,9 +233,6 @@ function result()
             }
             
         }
-    }
-    for(var i = 0; i < numero.length; i ++)
-    {
         if(numero.charAt(i) == '/')
         {
             resultado = 1
@@ -247,10 +244,7 @@ function result()
             }
             
         }
-    }
 
-    for(var i = 0; i < numero.length; i ++)
-    {
         if(numero.charAt(i) == '-')
         {
             suma = numero.split('-')
@@ -261,10 +255,7 @@ function result()
                 resultado = resultado - parseFloat(suma[j])
             }
         }
-    }
 
-    for(var i = 0; i < numero.length; i ++)
-    {
         if(numero.charAt(i) == 'x')
         {
             resultado = 1
@@ -281,20 +272,6 @@ function result()
     
     console.log(resultado) 
     vista = document.getElementById('casilla').value = resultado
-    // var separador = numero.split('+')
-    // var resultado = 0
-
-    // for (var i = 0; i < separador.length; i ++)
-    // {
-    //     resultado = parseInt(separador[i]) + resultado
-    
-    // }
-    
-    // vista = document.getElementById('casilla').value = resultado
-
-    // console.log(resultado)
-    
-
 }
 
 
