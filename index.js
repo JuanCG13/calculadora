@@ -183,7 +183,7 @@ function div()
 function result()
 {
     var numero = vista
-    var suma = 0
+    var resultado = 0
 
     for(var i = 0; i < numero.length; i++)
     {
@@ -191,24 +191,38 @@ function result()
         {
             if(parseInt(numero.charCodeAt(i+1)) > 48 && parseInt(numero.charCodeAt(i+1)) < 58  )
             {
-                suma += parseInt(numero.charAt(i+1))
+                resultado += parseInt(numero.charAt(i+1))
                 // suma = parseInt(numero.charAt(i-1)) + parseInt(numero.charAt(i+1))
                 if(parseInt(numero.charCodeAt(i-1)) > 48 && parseInt(numero.charCodeAt(i-1)) < 58  )
                 {
 
-                    if(parseInt(numero.charAt(i-1)) != parseInt(numero.charAt(i-3)))
+                    if(parseInt(numero.charAt(i-1)) != parseInt(numero.charAt(i+2)))
                     {
-                        suma += parseInt(numero.charAt(i-1))
+                        resultado += parseInt(numero.charAt(i-1))
                         // suma = parseInt(numero.charAt(i-1)) + parseInt(numero.charAt(i+1))
                     }
                 }
             }
-
+            
         }
         
         if(numero.charAt(i) == '-' )
         {
-            console.log('resta')
+            if(parseInt(numero.charCodeAt(i+1)) > 48 && parseInt(numero.charCodeAt(i+1)) < 58  )
+            {
+                resultado = resultado - parseInt(numero.charAt(i+1))
+                // suma = parseInt(numero.charAt(i-1)) + parseInt(numero.charAt(i+1))
+                if(parseInt(numero.charCodeAt(i-1)) > 48 && parseInt(numero.charCodeAt(i-1)) < 58  )
+                {
+
+                    if(parseInt(numero.charAt(i-1)) != parseInt(numero.charAt(i+2)))
+                    {
+                        resultado += parseInt(numero.charAt(i-1))
+                        // suma = parseInt(numero.charAt(i-1)) + parseInt(numero.charAt(i+1))
+                    }
+                }
+            }
+            
         }
         
         if(numero.charAt(i) == 'x' )
@@ -221,7 +235,7 @@ function result()
             console.log('division')
         }
     }
-    console.log(suma)
+    console.log(resultado)
     // var separador = numero.split('+')
     // var resultado = 0
 
