@@ -22,7 +22,7 @@ function verificacion (cadena)
     var cont = 0
     for(var i = 0; i < cadena.length; i ++)
     {
-        if(cadena.charCodeAt(i) >= 42 && cadena.charCodeAt(i) <= 47 )
+        if(cadena.charCodeAt(i) >= 42 && cadena.charCodeAt(i) <= 47  || cadena.charCodeAt(i) == 120)
         {
             cont += 1
         }
@@ -218,11 +218,69 @@ function div()
 function result()
 {
     var numero = vista
-    numero.replace()
-    var resultado = parseInt(numero)
+    var suma = 0
+    var resultado = 0
+
+    for(var i = 0; i < numero.length; i ++)
+    {
+        if(numero.charAt(i) == '+')
+        {
+            suma = numero.split('+')
+            
+            for(var j = 0; j < suma.length; j ++ )
+            {
+                resultado = parseInt(suma[j]) + resultado
+            }
+            
+        }
+    }
+    for(var i = 0; i < numero.length; i ++)
+    {
+        if(numero.charAt(i) == '/')
+        {
+            resultado = 1
+            suma = numero.split('/')
+            
+            for(var j = suma.length - 1; j >= 0 ; j -- )
+            {
+                resultado = parseFloat(suma[j]) / resultado
+            }
+            
+        }
+    }
+
+    for(var i = 0; i < numero.length; i ++)
+    {
+        if(numero.charAt(i) == '-')
+        {
+            suma = numero.split('-')
+            
+            for(var j = 0; j < suma.length; j ++ )
+            {
+                resultado = - (resultado)
+                resultado = resultado - parseFloat(suma[j])
+            }
+        }
+    }
+
+    for(var i = 0; i < numero.length; i ++)
+    {
+        if(numero.charAt(i) == 'x')
+        {
+            resultado = 1
+            suma = numero.split('x')
+            
+            for(var j = 0; j < suma.length; j ++ )
+            {
+                resultado = parseInt(suma[j]) * resultado
+            }
+            
+        }
+    }
 
     
     console.log(resultado) 
+    vista = document.getElementById('casilla').value = resultado
     // var separador = numero.split('+')
     // var resultado = 0
 
