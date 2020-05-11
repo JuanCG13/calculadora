@@ -299,7 +299,7 @@ function result() {
         {
             vista = document.getElementById('casilla').value = ''
         }
-        else
+        if(resultado != null)
         {
             console.log(resultado)
         }
