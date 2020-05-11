@@ -295,8 +295,16 @@ function result() {
             }
         }
 
-        console.log(resultado)
-        vista = document.getElementById('casilla').value = resultado
+        if(resultado == null)
+        {
+            vista = document.getElementById('casilla').value = ''
+        }
+        else
+        {
+            console.log(resultado)
+        }
+        
+        
     }
 
 }
